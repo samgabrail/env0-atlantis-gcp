@@ -35,3 +35,4 @@ override.tf.json
 terraform.rc
 
 start.sh
+gcp-secret-key.json
