@@ -1,20 +1,20 @@
-# terraform {
-#   backend "gcs" {
-#     bucket = "tekanaid-tf-state-prod"
-#     prefix = "terraform/state"
-#   }
-#   required_providers {
-#     google = {
-#       source  = "hashicorp/google"
-#       version = "4.40.0"
-#     }
-#   }
-# }
+terraform {
+  backend "gcs" {
+    bucket = "tekanaid-tf-state-prod"
+    prefix = "terraform/state"
+  }
+  required_providers {
+    google = {
+      source  = "hashicorp/google"
+      version = "4.40.0"
+    }
+  }
+}
 
-# provider "google" {
-#   project     = var.project
-#   region      = var.region
-# }
+provider "google" {
+  project     = var.project
+  region      = var.region
+}
 
 # resource "google_compute_instance" "default" {
 #   name         = var.instance_name
