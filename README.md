@@ -10,19 +10,22 @@ This is a [good guide to follow.](https://www.runatlantis.io/guide/testing-local
 
 ## Start Ngrok
 
+First you'll need to create an account by going to https://ngrok.com/. You will then get a token that you can use below.
+
 ```bash
+ngrok config add-authtoken <your_token>
 ngrok http 4141
 ```
 
 Grab the Forwarding URL Example:
 ```bash
-https://6cf5-20-232-211-174.ngrok.io
+https://ed7f-20-232-211-174.ngrok-free.app
 ```
 
 Insert that in the `URL` environment variable in `start.sh`
 
 ```bash
-URL="https://6cf5-20-232-211-174.ngrok.io"
+URL="https://ed7f-20-232-211-174.ngrok-free.app"
 ```
 
 ## Create a Random String
@@ -38,7 +41,7 @@ SECRET="thisisrandom"
 Go to your repo's settings
 Select Webhooks or Hooks in the sidebar
 Click Add webhook
-set Payload URL to your ngrok url with /events at the end. Ex. https://6cf5-20-232-211-174.ngrok.io/events
+set Payload URL to your ngrok url with /events at the end. Ex. https://ed7f-20-232-211-174.ngrok-free.app/events
 double-check you added /events to the end of your URL.
 set Content type to application/json
 set Secret to your random string that you set above
@@ -87,4 +90,6 @@ The application should now run on port 4141 and you can access it by clicking on
 ## Add a Developer to our Repo
 
 Now let's invite a developer to our repo so they can run a pull request to a dev branch.
+
+Make sure to make the main branch protected.
 
