@@ -36,3 +36,4 @@ terraform.rc
 
 start.sh
 gcp-secret-key.json
+.terraform.lock.hcl

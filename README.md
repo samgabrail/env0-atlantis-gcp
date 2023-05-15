@@ -19,13 +19,13 @@ ngrok http 4141
 
 Grab the Forwarding URL Example:
 ```bash
-https://ed7f-20-232-211-174.ngrok-free.app
+https://a2ab-20-120-99-235.ngrok-free.app
 ```
 
 Insert that in the `URL` environment variable in `start.sh`
 
 ```bash
-URL="https://ed7f-20-232-211-174.ngrok-free.app"
+URL="https://a2ab-20-120-99-235.ngrok-free.app"
 ```
 
 ## Create a Random String
@@ -41,7 +41,7 @@ SECRET="thisisrandom"
 Go to your repo's settings
 Select Webhooks or Hooks in the sidebar
 Click Add webhook
-set Payload URL to your ngrok url with /events at the end. Ex. https://ed7f-20-232-211-174.ngrok-free.app/events
+set Payload URL to your ngrok url with /events at the end. Ex. https://a2ab-20-120-99-235.ngrok-free.app/events
 double-check you added /events to the end of your URL.
 set Content type to application/json
 set Secret to your random string that you set above
@@ -93,3 +93,4 @@ Now let's invite a developer to our repo so they can run a pull request to a dev
 
 Make sure to make the main branch protected.
 
+You can now make a change as a developer in a dev branch and then create a pull request. This will automatically run a Terraform plan. If satisfied, you can then run `atlantis apply` which will apply the changes. Then the owner of the repo can now approve the pull request and the dev branch will get merged with the main branch.
