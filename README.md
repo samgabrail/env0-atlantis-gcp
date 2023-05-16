@@ -19,13 +19,13 @@ ngrok http 4141
 
 Grab the Forwarding URL Example:
 ```bash
-https://a2ab-20-120-99-235.ngrok-free.app
+https://b3c4-13-82-2-162.ngrok-free.app
 ```
 
 Insert that in the `URL` environment variable in `start.sh`
 
 ```bash
-URL="https://a2ab-20-120-99-235.ngrok-free.app"
+URL="https://b3c4-13-82-2-162.ngrok-free.app"
 ```
 
 ## Create a Random String
@@ -41,7 +41,7 @@ SECRET="thisisrandom"
 Go to your repo's settings
 Select Webhooks or Hooks in the sidebar
 Click Add webhook
-set Payload URL to your ngrok url with /events at the end. Ex. https://a2ab-20-120-99-235.ngrok-free.app/events
+set Payload URL to your ngrok url with /events at the end. Ex. https://b3c4-13-82-2-162.ngrok-free.app/events
 double-check you added /events to the end of your URL.
 set Content type to application/json
 set Secret to your random string that you set above
