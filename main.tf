@@ -16,27 +16,26 @@ provider "google" {
   region      = var.region
 }
 
-# resource "google_compute_instance" "default" {
-#   name         = var.instance_name
-#   machine_type = "e2-micro"
+resource "google_compute_instance" "default" {
+  name         = var.instance_name
+  machine_type = "e2-micro"
   
-#   zone         = var.zone
-#   tags = ["dev", "engineering"]
+  zone         = var.zone
+  tags = ["dev", "engineering"]
 
-#   boot_disk {
-#     initialize_params {
-#       image = "projects/ubuntu-os-cloud/global/images/ubuntu-2204-jammy-v20221014"
-#       labels = {
-#         env = "dev"
-#       }
-#     }
-#   }
+  boot_disk {
+    initialize_params {
+      image = "projects/ubuntu-os-cloud/global/images/ubuntu-2204-jammy-v20221014"
+      labels = {
+        env = "dev"
+      }
+    }
+  }
 
-#   network_interface {
-#     network = "default"
-#     access_config {
-#       // Ephemeral public IP
-#     }
-#   }
-# }
-
+  network_interface {
+    network = "default"
+    access_config {
+      // Ephemeral public IP
+    }
+  }
+}
